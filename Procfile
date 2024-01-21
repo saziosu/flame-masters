@@ -1,0 +1,1 @@
+web: gunicorn flame_masters.wsgi
