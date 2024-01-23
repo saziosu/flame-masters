@@ -55,12 +55,12 @@ class Product(models.Model):
     """
     Model for information on the individual products
     """
-    categories = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
     heat_level = models.ForeignKey('HeatLevel', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254, blank=False, null=False)
-    description = models.TextField()
-    ingredients = models.TextField()
+    description = models.TextField(null=False, blank=False)
+    ingredients = models.TextField(null=False, blank=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
