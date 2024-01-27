@@ -7,6 +7,9 @@ class Category(models.Model):
     Model for the categories.
     In this website, the products are categorised by their product type
     """
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 

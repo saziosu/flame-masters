@@ -2,7 +2,30 @@ from django.contrib import admin
 from .models import Product, Category, Brand, HeatLevel
 
 # Register your models here.
-admin.site.register(Product)
-admin.site.register(Category)
-admin.site.register(Brand)
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'brand',
+        'heat_level',
+        'category',
+        'price',
+        'rating',
+    )
+    
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+class BrandAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Brand, BrandAdmin)
 admin.site.register(HeatLevel)
