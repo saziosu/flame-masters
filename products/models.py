@@ -37,21 +37,16 @@ class Brand(models.Model):
 class HeatLevel(models.Model):
     """
     Model to categorise the heat level for the products
-    Set to a choice field so there is a set amount of 5 heat levels
     """
 
-    HEAT_CHOICES = (
-        ('mild', 'Mild'),
-        ('medium', 'Medium'),
-        ('hot', 'Hot'),
-        ('extra_hot', 'Extra Hot'),
-        ('inferno', 'Inferno'),
-    )
-
-    name = models.CharField(max_length=10, choices=HEAT_CHOICES)
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
 
 
 class Product(models.Model):
