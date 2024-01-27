@@ -25,7 +25,13 @@ class BrandAdmin(admin.ModelAdmin):
         'name',
     )
 
+class HeatLevelAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Brand, BrandAdmin)
-admin.site.register(HeatLevel)
+admin.site.register(HeatLevel, HeatLevelAdmin)

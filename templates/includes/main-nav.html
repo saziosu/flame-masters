@@ -17,12 +17,12 @@
                 Hot Sauce
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Mild</a>
-                <a href="" class="dropdown-item">Medium</a>
-                <a href="" class="dropdown-item">Hot</a>
-                <a href="" class="dropdown-item">Extra Hot</a>
-                <a href="" class="dropdown-item">Inferno</a>
-                <a href="" class="dropdown-item">All Hot Sauce</a>
+                <a href="{% url 'products' %}?category=hot_sauce&heat_level=mild" class="dropdown-item">Mild</a>
+                <a href="{% url 'products' %}?category=hot_sauce&heat_level=medium" class="dropdown-item">Medium</a>
+                <a href="{% url 'products' %}?category=hot_sauce&heat_level=hot" class="dropdown-item">Hot</a>
+                <a href="{% url 'products' %}?category=hot_sauce&heat_level=extra_hot" class="dropdown-item">Extra Hot</a>
+                <a href="{% url 'products' %}?category=hot_sauce&heat_level=inferno" class="dropdown-item">Inferno</a>
+                <a href="{% url 'products' %}?category=hot_sauce" class="dropdown-item">All Hot Sauce</a>
             </div>
         </li>
 
@@ -31,12 +31,12 @@
                 Spicy Snacks
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Mild</a>
-                <a href="" class="dropdown-item">Medium</a>
-                <a href="" class="dropdown-item">Hot</a>
-                <a href="" class="dropdown-item">Extra Hot</a>
-                <a href="" class="dropdown-item">Inferno</a>
-                <a href="" class="dropdown-item">All Snacks</a>
+                <a href="{% url 'products' %}?category=spicy_snacks&heat_level=mild" class="dropdown-item">Mild</a>
+                <a href="{% url 'products' %}?category=spicy_snacks&heat_level=medium" class="dropdown-item">Medium</a>
+                <a href="{% url 'products' %}?category=spicy_snacks&heat_level=hot" class="dropdown-item">Hot</a>
+                <a href="{% url 'products' %}?category=spicy_snacks&heat_level=extra_hot" class="dropdown-item">Extra Hot</a>
+                <a href="{% url 'products' %}?category=spicy_snacks&heat_level=inferno" class="dropdown-item">Inferno</a>
+                <a href="{% url 'products' %}?category=spicy_snacks" class="dropdown-item">All Snacks</a>
             </div>
         </li>
     </ul>
