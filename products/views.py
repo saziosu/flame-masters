@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category, HeatLevel, Brand
 
 # Create your views here.
@@ -13,9 +14,26 @@ def all_products(request):
     categories = None
     brand = None
     heat_level = None
+    sort = None
+    direction = None
 
     if request.GET:
-        
+
+        if 'sort' in request.GET:
+            # Allow sorting the products
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                # set the direction of the sorting
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+                
         if 'category' in request.GET:
             # Allow filter by category
             categories = request.GET['category'].split(',')
@@ -33,7 +51,6 @@ def all_products(request):
             heat_level = request.GET['heat_level'].split(',')
             products = products.filter(heat_level__name__in=heat_level)
             heat_level = HeatLevel.objects.filter(name__in=heat_level)
-            
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -42,15 +59,20 @@ def all_products(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
             
+            # queries to allow searching for a product
+            # i for case insensitivity
             queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(ingredients__icontains=query) | Q(heat_level__name__iexact=query) | Q(brand__name__icontains=query)
             products = products.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
         'search_term': query,
         'current_categories' : categories,
-        # 'current_brands' : brand,
+        'current_brands' : brand,
         'current_heat' : heat_level,
+        'current_sorting' : current_sorting,
     }
 
     return render(request, 'products/products.html', context)
