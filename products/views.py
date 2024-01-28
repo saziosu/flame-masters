@@ -26,6 +26,9 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'brand':
+                sortkey = 'brand__name'
+            
 
             if 'direction' in request.GET:
                 # set the direction of the sorting
