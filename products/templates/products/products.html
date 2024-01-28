@@ -40,9 +40,20 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">Brand: {{ product.brand.friendly_name }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">Brand: 
+                                                <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand.name }}" aria-label="View all products from the {{ product.brand.friendly_name }} brand">{{ product.brand.friendly_name }}</a>
+                                            </p>
                                             <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            <p class="lead mb-0 text-left font-weight-bold">Heat: {{ product.heat_level.friendly_name }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">Heat: 
+                                                <a class="text-muted" href="{% url 'products' %}?heat_level={{ product.heat_level.name }} " aria-label="View all products of {{ product.heat_level.friendly_name }} heat level">{{ product.heat_level.friendly_name }}</a>
+                                            </p>
+                                            {% if product.category %}
+                                            <p class="small mt-1 mb-0">
+                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}" aria-label="View all {{ product.category.friendly_name }}">
+                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                </a>
+                                            </p>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
