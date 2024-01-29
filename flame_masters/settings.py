@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by django-allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -166,6 +167,11 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# how much to spend for free delivery
+FREE_SHIPPING_THRESHOLD = 30
+# cost of standard delivery (less than 30)
+STANDARD_SHIPPING_PERCENTAGE = 7
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
