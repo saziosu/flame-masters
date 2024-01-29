@@ -41,6 +41,8 @@ class HeatLevel(models.Model):
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    # setting this to apply a numerated heat order, so it is not by ID/alphabetical
+    heat_order = models.PositiveIntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name

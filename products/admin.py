@@ -29,6 +29,7 @@ class HeatLevelAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
+        'heat_order',
     )
 
 admin.site.register(Product, ProductAdmin)
