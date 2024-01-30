@@ -174,7 +174,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # how much to spend for free delivery
 FREE_SHIPPING_THRESHOLD = 30
 # cost of standard delivery (less than 30)
-STANDARD_SHIPPING_PERCENTAGE = 7
+STANDARD_SHIPPING_PERCENTAGE = 30
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
