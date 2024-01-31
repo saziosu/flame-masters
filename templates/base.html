@@ -137,6 +137,16 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+
+    <script>
+        // Toast messages disappear after 5 seconds
+        // Used the django blog project for help adding this
+        setTimeout(function () {
+            let messages = document.getElementsByClassName("toast");
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 5000)
+    </script>
     {% endblock %}
 
     
