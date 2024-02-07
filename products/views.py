@@ -66,8 +66,8 @@ def all_products(request):
             
             # queries to allow searching for a product
             # i for case insensitivity
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(ingredients__icontains=query) | Q(heat_level__name__iexact=query) | Q(brand__name__icontains=query)
-            products = products.filter(queries)
+            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(ingredients__icontains=query) | Q(heat_level__name__iexact=query) | Q(brand__name__icontains=query) # noqa
+            products = products.filter(queries) 
 
     current_sorting = f'{sort}_{direction}'
 
