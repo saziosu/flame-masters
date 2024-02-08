@@ -13,6 +13,7 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
+            # toast message that the profile is successfully updated
             messages.success(request, 'Profile updated successfully')
     # populate the form with the user's profile information
     form = UserProfileForm(instance=profile)
@@ -23,7 +24,6 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        # 'on_profile_page': True
     }
 
     return render(request, template, context)
