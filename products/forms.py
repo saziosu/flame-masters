@@ -17,12 +17,12 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         # Set up brands as a choice in form
         brands = Brand.objects.all()
-        friendly_names = [(b.id, b.get_friendly_name()) for b in categories]
+        friendly_names = [(b.id, b.get_friendly_name()) for b in brands]
         self.fields['brand'].choices = friendly_names
         # Set up heat_level as a choice in form
         heat_levels = HeatLevel.objects.all()
-        friendly_names = [(h.id, h.get_friendly_name()) for h in categories]
-        self.fields['brand'].choices = friendly_names
+        friendly_names = [(h.id, h.get_friendly_name()) for h in heat_levels]
+        self.fields['heat_level'].choices = friendly_names
 
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
