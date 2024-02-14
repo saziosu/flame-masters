@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Contact Form Submissions</h2>
+                <hr>
+            </div>
+        </div>
+        
+        {% for contact in contact_list %}
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ contact.name }}</h5>
+                        <p class="card-text"><strong>Email:</strong> {{ contact.email }}</p>
+                        <p class="card-text"><strong>Date:</strong> {{ contact.created_on }}</p>
+                        <p class="card-text"><strong>Contact Reason: </strong>{{ contact.get_reason_display }}</p>
+                        {% if contact.order_number %}
+                        <p class="card-text"><strong>Date:</strong> {{ contact.order_number }}</p>
+                        {% endif %}
+                        <p class="card-text"><strong>Message:</strong> {{ contact.message }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
