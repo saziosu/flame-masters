@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def cart_contents(request):
     """
     Context processor
@@ -32,13 +33,13 @@ def cart_contents(request):
     grand_total = shipping + total
 
     context = {
-        'cart_items' : cart_items,
-        'total' : total,
-        'product_count' : product_count,
-        'shipping' : shipping,
-        'free_shipping_delta' : free_shipping_delta,
-        'free_shipping_threshold' : settings.FREE_SHIPPING_THRESHOLD,
-        'grand_total' : grand_total,
+        'cart_items': cart_items,
+        'total': total,
+        'product_count': product_count,
+        'shipping': shipping,
+        'free_shipping_delta': free_shipping_delta,
+        'free_shipping_threshold': settings.FREE_SHIPPING_THRESHOLD,
+        'grand_total': grand_total,
     }
 
     return context
