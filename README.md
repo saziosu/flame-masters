@@ -1,110 +1,206 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Flame Masters
 
-Welcome Sarah O'Sullivan,
+[AM I RESPONSIVE IMAGE]
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Link for the finished deployed site: LINK
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Table of Contents
 
-## Gitpod Reminders
+- [Flame Masters](#flamemasters)
+- [Table of Contents](#table-of-contents)
+- [Site Goals](#site-goals)
+- [Agile Methodology](#agile-methodology)
+  - [Labels](#labels)
+  - [Epics](#epics)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
+- [Design](#design)
+  - [Color Scheme](#color-scheme)
+  - [Typography](#typography)
+  - [Imagery](#imagery)
+- [Features](#features)
+  - [Current Features](#current-features)
+  - [Future Features](#future-features)
+  - [Accessibility](#accessibility)
+- [Technology Used](#technology-used)
+  - [Languages](#languages)
+  - [Frameworks, Libraries \& Programs](#frameworks-libraries--programs)
+- [Deployment \& Development](#deployment--development)
+  - [Forking the Repository](#forking-the-repository)
+  - [Deploy to Heroku](#deploy-to-heroku)
+- [Testing](#testing)
+- [Credits](#credits)
+  - [Code](#code)
+  - [Media](#media)
+  - [Content](#content)
+- [Acknowledgements](#acknowledgements)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+# Site Goals
+site goals here
 
-A blue button should appear to click: _Make Public_,
+# Agile Methodology
+This project was developed using agile methodologies by utilising Epics and User stories.
+User storied were assigned to Epics. 
+The Epics & User Stories were prioritised by labels. `must have`, `should have`, `could have`.
+A kanban board in GitHub was used to track these, with a `not started`, `in progress`, `done`, `NINTH(not important, nice to have)` and `bug` sections.
+When a user story is completed, it gets moved to the done section.
+The full kanban board can be viewed here: LINK
 
-Another blue button should appear to click: _Open Browser_.
+## Labels
+The labels are priorised as follows:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+must have|This feature/issue is required for the project to function
+should have|Important to implement but will not crash the project without but still key features
+could have|Would like to have
 
-A blue button should appear to click: _Make Public_,
+These result in the following stats:
 
-Another blue button should appear to click: _Open Browser_.
+IMAGE
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Epics
+There are three Epics within this project:
 
-To log into the Heroku toolbelt CLI:
+**EPIC: ONEt**
+Details on epic one
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+**EPIC: TWO**
+Details on Epic two
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+## User Stories
+Majority of User stories are linked to Epics. Labels are applied for prioritisation, such as `must have`, `should have` and `could have`.
 
-## Release History
+**Epic**|**User Story**|**Label**
+TABLE OF USER STORIES
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Wireframes
 
-**September 20 2023:** Update Python version to 3.9.17.
+The following wireframes were used to plan the look of the site:
+IMAGE
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+# Design
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Color Scheme
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+COLOR SCHEME DETAILS
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Typography
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Fonts were chosen from GoogleFonts
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+* [Syne](https://fonts.google.com/specimen/Syne) was used for header fonts
+* [Inter](https://fonts.google.com/specimen/Inter) was used for all other fonts
+* San-serif was used as the fallback font
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Imagery
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+**All images were chosen to match the theme of the site**
+IMAGE DETAILS
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Features 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Current Features
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Feature One
+details and image
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### FEATURE TWO
+details and image
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Future Features
 
-------
+* Details
+* On
+* Future
+* Features
 
-## FAQ about the uptime script
+## Accessibility
 
-**Why have you added this script?**
+ACCESSIBILITY CONSIDERATIONS
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Technology Used
 
-**How will this affect me?**
+## Languages
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* HTML
+* CSS
+* Python
+* JavaScript
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Frameworks, Libraries & Programs 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+* BootStrap
+* Django
+* AutoSlug
+* [ElephantSQL](https://www.elephantsql.com/) + PostgreSQL
+* AWS S3
+* CrispyForms
+* django-allauth
+* django-phonenumber-field & phonenumbers
+* gunicorn
+* psycopg2
+* requests-oauthlib
+* sqlparse
+* urllib3
 
-**So….?**
+# Deployment & Development
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Forking the Repository
 
-**Can I opt out?**
+1. Log in or Sign up to [GitHub](https://github.com/)
+2. Navigate to https://github.com/saziosu/book-swap.
+3. Click the 'fork' button in the top right corner.
+4. Feel free to customize your repo name, this is not required.
+5. Click the Create Fork button.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Deploy to Heroku
+Heroku was used to deploy this site:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+1. Run pip3 freeze > requirements.txt in the console to set up the requirements.txt file. This command will create the file if it does not already exist.
+2. Commit any changes and push to GitHub.
+3. Navigate to Heroku's website and log in to the dashboard.
+4. Click on "Create new app" in the top right.
+5. Enter the "App name" and select your region, then click "Create App". 
+6. Head to the Settings tab in the new app.
+7. Go to "Config Vars" under the Settings tab.
+8. Click on "Reveals Config Vars".
+9. Add the "ARN", "DATABASE_URL", and "SECRET_KEY" values generated for the project
+10. Add "PORT" key and "8000" value to the config vars.
+11. Move to the "deploy" tab on the app, and scroll down to the deployment method section.
+12. Select "GitHub" and connect to GitHub.
+13. Search for the appropriate GitHub repo and Connect.
+14. Select "Automatic deploys" or "Manual deploys" to deploy the application.
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+# Testing
 
----
+[TESTING.md](TESTING.md)
 
-Happy coding!
+# Credits
+
+## Code
+
+* CODE
+* CREDITS
+* HERE
+
+
+## Media
+
+* MEDIA
+* CREDITS
+* HERE
+
+
+## Content
+
+* CONTENT
+* CREDITS
+
+# Acknowledgements
+
+* Thanks y'all
+
+[Top](#flamemasters)
