@@ -19,11 +19,19 @@ class ContactFormSubmitView(CreateView):
     model = Contact
     template_name = 'contact/contact.html'
     form_class = ContactForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('contact-success')
 
     def form_valid(self, form):
         messages.success(self.request, 'Successfully added your Query!')
         return super().form_valid(form)
+
+
+def contact_success(request):
+    """
+    A view for redirecting the user to a thank you page
+    after submitting a query on the contact form
+    """
+    return render(request, 'contact/contact_success.html')
 
 
 class ContactView(LoginRequiredMixin, UserPassesTestMixin, ListView):
