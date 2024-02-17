@@ -89,9 +89,13 @@ def product_detail(request, product_id):
     View to show the full detail of an individual product
     """
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.product_reviews.all()
+    avg_rating = ProductReview.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg']
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'avg_rating': avg_rating,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -175,6 +179,9 @@ def delete_product(request, product_id):
 
 @login_required
 def review_product(request, product_id):
+    """
+    A view to collect product reviews from the user
+    """
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductReviewForm(request.POST)
@@ -187,4 +194,10 @@ def review_product(request, product_id):
             return redirect('product_detail', product_id=product_id)
     else:
         form = ProductReviewForm()
-    return render(request, 'products/review_product.html', {'form': form, 'product': product})
+
+    template = 'products/review_product.html'
+    context = {
+        'form': form,
+        'product': product
+        }
+    return render(request, template, context)
