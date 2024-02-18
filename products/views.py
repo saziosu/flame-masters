@@ -186,27 +186,32 @@ def review_product(request, product_id):
     The user must be logged in and have ordered the product before
     """
     product = get_object_or_404(Product, pk=product_id)
-    # Determine if the user is authenticated
-    if request.user.is_authenticated and not isinstance(request.user, AnonymousUser):
-        # Check that the user has ordered the product before
-        if Order.objects.filter(email=request.user.email, lineitems__product=product).exists():
-            if request.method == 'POST':
-                form = ProductReviewForm(request.POST)
-                if form.is_valid():
-                    review = form.save(commit=False)
-                    review.product = product
-                    review.reviewer = request.user
-                    review.save()
-                    messages.success(request, 'Successfully Added your review!')
-                    return redirect('product_detail', product_id=product_id)
-            else:
-                form = ProductReviewForm()
-        else:
-            messages.error(request, 'You must have ordered this product to write a review')
-            return redirect('product_detail', product_id=product_id)
+    # Only allow the user to rate a product once
+    if ProductReview.objects.filter(product=product, reviewer=request.user).exists():
+        messages.error(request, 'Sorry, you can only rate a product once')
+        return redirect('product_detail', product_id=product_id)
     else:
-        messages.error(request, 'Sorry, you must be logged in to review products')
-        return redirect('account_login')
+        # Determine if the user is authenticated
+        if request.user.is_authenticated and not isinstance(request.user, AnonymousUser):
+            # Check that the user has ordered the product before
+            if Order.objects.filter(email=request.user.email, lineitems__product=product).exists():
+                if request.method == 'POST':
+                    form = ProductReviewForm(request.POST)
+                    if form.is_valid():
+                        review = form.save(commit=False)
+                        review.product = product
+                        review.reviewer = request.user
+                        review.save()
+                        messages.success(request, 'Successfully Added your review!')
+                        return redirect('product_detail', product_id=product_id)
+                else:
+                    form = ProductReviewForm()
+            else:
+                messages.error(request, 'You must have ordered this product to write a review')
+                return redirect('product_detail', product_id=product_id)
+        else:
+            messages.error(request, 'Sorry, you must be logged in to review products')
+            return redirect('account_login')
 
     template = 'products/review_product.html'
     context = {
