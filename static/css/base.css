@@ -178,9 +178,15 @@ body {
 	color: #17a2b8; /* text-info */
 }
 
+/* Set pepper icon to red */
 .fa-pepper-hot {
     color: rgb(208, 9, 9);
     font-size: 1.3rem;
+}
+
+/* Editing homepage hero message */
+.home-message {
+    background-color: rgba(255, 224, 224, 0.6);
 }
 
 /* fixed top navbar only on medium and up */
