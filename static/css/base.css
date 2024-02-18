@@ -178,6 +178,11 @@ body {
 	color: #17a2b8; /* text-info */
 }
 
+.fa-pepper-hot {
+    color: rgb(208, 9, 9);
+    font-size: 1.3rem;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
