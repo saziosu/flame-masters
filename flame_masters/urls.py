@@ -32,6 +32,6 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'flame_masters.views.handler404'
-# handler403 = 'flame_masters.views.handler403'
-# handler500 = 'flame_masters.views.handler403'
+handler403 = 'flame_masters.views.handler403'
+handler500 = 'flame_masters.views.handler500'
 

@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import AnonymousUser
 from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 from .models import Product, Category, HeatLevel, Brand, ProductReview
 from .forms import ProductForm, ProductReviewForm
+from checkout.models import Order
 
 
 def all_products(request):
@@ -181,19 +183,30 @@ def delete_product(request, product_id):
 def review_product(request, product_id):
     """
     A view to collect product reviews from the user
+    The user must be logged in and have ordered the product before
     """
     product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
-        form = ProductReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.product = product
-            review.reviewer = request.user
-            review.save()
-            messages.success(request, 'Successfully Added your review!')
+    # Determine if the user is authenticated
+    if request.user.is_authenticated and not isinstance(request.user, AnonymousUser):
+        # Check that the user has ordered the product before
+        if Order.objects.filter(email=request.user.email, lineitems__product=product).exists():
+            if request.method == 'POST':
+                form = ProductReviewForm(request.POST)
+                if form.is_valid():
+                    review = form.save(commit=False)
+                    review.product = product
+                    review.reviewer = request.user
+                    review.save()
+                    messages.success(request, 'Successfully Added your review!')
+                    return redirect('product_detail', product_id=product_id)
+            else:
+                form = ProductReviewForm()
+        else:
+            messages.error(request, 'You must have ordered this product to write a review')
             return redirect('product_detail', product_id=product_id)
     else:
-        form = ProductReviewForm()
+        messages.error(request, 'Sorry, you must be logged in to review products')
+        return redirect('account_login')
 
     template = 'products/review_product.html'
     context = {
