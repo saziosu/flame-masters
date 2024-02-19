@@ -25,6 +25,7 @@
 
         <div class="row">
             <div class="col">
+                <!-- If there is items in the cart -->
                 {% if cart_items %}
                     <div class="d-block d-md-none">
                         <div class="row">
@@ -38,6 +39,7 @@
                                 <p class="text-muted mb-5">A summary of your cart contents is below</p>
                             </div>
                         </div>
+                        <!-- Loop each item in cart -->
                         {% for item in cart_items %}
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-2">
@@ -62,6 +64,7 @@
                             </a>	
                         </div>
                     </div>
+                    <!-- Table for listing the items in the cart -->
                     <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
@@ -106,6 +109,7 @@
                         </table>
                     </div>
                 {% else %}
+                    <!-- No items in the cart, cart is reported empty -->
                     <p class="lead mb-5">Your cart is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">

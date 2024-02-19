@@ -6,7 +6,7 @@ from products.models import Product
 
 def cart_contents(request):
     """
-    Context processor
+    Context processor for the shopping cart
     """
     cart_items = []
     total = 0
@@ -14,6 +14,7 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     for item_id, quantity in cart.items():
+        # Append the cart items to the cart
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
         product_count += quantity
