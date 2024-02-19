@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Contact(models.Model):
     """
     A model to store contact form entries
@@ -11,7 +11,7 @@ class Contact(models.Model):
         ('complaint', 'Complaint'),
     )
 
-    # The type of query used
+    # The type of query from the user
     reason = models.CharField(max_length=14, choices=Q_CHOICES)
     order_number = models.CharField(max_length=50, null=True, blank=True)
     name = models.CharField(max_length=30, null=False, blank=False)

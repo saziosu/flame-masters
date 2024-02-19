@@ -19,6 +19,7 @@ class ContactFormSubmitView(CreateView):
     model = Contact
     template_name = 'contact/contact.html'
     form_class = ContactForm
+    # redirect the user to the contact-success page
     success_url = reverse_lazy('contact-success')
 
     def form_valid(self, form):

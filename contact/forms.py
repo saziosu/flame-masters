@@ -20,6 +20,7 @@ class ContactForm(ModelForm):
         ]
 
     def __init__(self, *args, **kwargs):
+        # crispy forms helper and layouts
         super(ContactForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_action = 'contactform'
