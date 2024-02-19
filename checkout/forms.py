@@ -8,6 +8,7 @@ class OrderForm(forms.ModelForm):
     """
     class Meta:
         model = Order
+        # fields user can enter in form
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
                   'town_or_city', 'postcode', 'country',

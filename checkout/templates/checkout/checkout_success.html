@@ -16,6 +16,7 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
+        <!-- Thank user for shopping -->
         <div class="row">
             <div class="col">
                 <hr>
@@ -26,6 +27,7 @@
         </div>
 
         <div class="row">
+            <!-- List the order details in the confirmation page -->
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
@@ -58,6 +60,7 @@
                         </div>
                     </div>
 
+                    <!-- List the line items in the order -->
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -192,6 +195,7 @@
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
+                <!-- If the user access the order confirmation from the profile page -->
                 {% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
                         <span class="icon mr-2">

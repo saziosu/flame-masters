@@ -17,6 +17,9 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Cache checkout data for stripe
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -33,6 +36,9 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    A view to handle the checkout with stripe
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -52,6 +58,7 @@ def checkout(request):
         }
 
         order_form = OrderForm(form_data)
+        # If the order form is valid, save the details
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -93,6 +100,7 @@ def checkout(request):
                 Please double check your information.')
     else:
         cart = request.session.get('cart', {})
+        # If there's nothing in the cart, send an error
         if not cart:
             messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
