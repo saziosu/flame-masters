@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: LINK
+Sitemap: https://flame-masters-f04a2ade371e.herokuapp.com/sitemap.xml

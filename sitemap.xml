@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/accounts/signup/</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/accounts/login/</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/cart/</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?sort=brand&amp;direction=asc</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?sort=heat_level&amp;direction=asc</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=hot_sauce&amp;heat_level=mild</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=hot_sauce&amp;heat_level=medium</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=hot_sauce&amp;heat_level=hot</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=hot_sauce&amp;heat_level=extra_hot</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=hot_sauce&amp;heat_level=inferno</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=hot_sauce</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=spicy_snacks&amp;heat_level=mild</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=spicy_snacks&amp;heat_level=medium</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=spicy_snacks&amp;heat_level=hot</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=spicy_snacks&amp;heat_level=extra_hot</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=spicy_snacks&amp;heat_level=inferno</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?category=spicy_snacks</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/contact/</loc>
+	<lastmod>2024-02-19T21:30:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/9/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=adoboloco</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?heat_level=hot</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/15/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=angry_irishman</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?heat_level=mild</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/16/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=blue_diamond</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/14/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=bravado_spice</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/21/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=cheetos</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/23/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=chilli_wizards</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?heat_level=extra_hot</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/6/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=da_bomb</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/8/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=daddy_cool</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/2/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=daves_gourmet</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?heat_level=inferno</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/3/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/5/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=hot_headz</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/11/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=hot_ones</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?heat_level=medium</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/1/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=hotter_than_el</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/4/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=karma_sauce</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/19/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=khao_shong</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/18/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=kp</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/7/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=marie_sharp</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/13/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=mikey_v</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/25/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=rummy_bears</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/20/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=samyang</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/24/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/17/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=takis</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/22/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/10/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=tia_lupita</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/12/</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/products/?brand=tobasco</loc>
+	<lastmod>2024-02-19T21:30:12+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://flame-masters-f04a2ade371e.herokuapp.com/accounts/password/reset/</loc>
+	<lastmod>2024-02-19T21:31:07+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+</urlset>
