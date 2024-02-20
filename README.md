@@ -134,7 +134,8 @@ Cart Page:
 
 ## Color Scheme
 
-COLOR SCHEME DETAILS
+The main color scheme is white, grey and black.
+This overall gives a pleasant, clean look to the website
 
 ## Typography
 
@@ -146,26 +147,80 @@ Fonts were chosen from GoogleFonts
 
 ## Imagery
 
-**All images were chosen to match the theme of the site**
-IMAGE DETAILS
+Images were sourced from several places to get suitable images of a wide range of products.
+The full details of sources are in the media credits section of this README
 
 # Features 
 
 ## Current Features
 
-### Feature One
-details and image
+### Navigation
+![navigation](readme-images/navigation.png)
+The navbar is based on the Boutique Ado walkthrough. It is responsive via the bootstrap classes and features options like filtering products, contacting the website admins, viewing the shopping cart and signing up/logging in.
 
-### FEATURE TWO
-details and image
+### Authentication
+![register](readme-images/register.png)
+The authentication is located in the top header navbar section.
+This allows users to register for an account, login and sign out.
+This allows users to see different content based on their account role like user, or admin/superuser
+
+### Products
+![products](readme-images/products.png)
+The products page is based on the Boutique Ado walkthrough.
+It is also responsive via the bootstrap classes and features counts of the products features.
+It also allows sorting by brand name, heat level, price, etc.
+
+#### Product Detail
+![product detail](readme-images/product-detail.png)
+The product detail allows the user to view the full details of the product.
+The user can add the product to the cart from this page.
+It also includes the average rating and ingredients.
+If the website owner marks the product as a staff favourite it also notes this for the user on this page.
+
+### Product Reviews
+![product reviews](readme-images/product-reviews.png)
+The product reviews can be found at the bottom of the product detail page.
+This allows users to add review if they have ordered a product.
+They can also only leave one review for a product, this helps prevent the data on the rating from getting skewed by multiple reviews from one person.
+The user that made the review is allowed to edit or delete their review, allowing them to change their feedback.
+
+### Cart & Checkout
+![cart](readme-images/cart.png)
+The shopping cart uses bootstrap to remain responsive.
+It also allows the user to increase or decrease the number of items in the cart via the buttons on the right.
+
+![checkout](readme-images/checkout.png)
+The checkout also uses bootstrap to remain responsive.
+It provides on order summary and allows the user to save the details added to the checkout to their profile if they are logged in.
+
+### User Profile
+![profile](readme-images/profile.png)
+The user profile allows the user to update their information that will be loaded into the checkout.
+The user can also view their previous orders via the profile page.
+
+### Contact
+![contact](readme-images/contact.png)
+The contact page allows users to get into contact with the website owners. They can submit general queries, complaints and returns on this page.
+This page also allows the user to sign up for the MailChimp newletter to keep up to date with the latest news.
+
+### Contact Submissons
+![contact submissions](readme-images/contact-submissions.png)
+Superusers can view the contact submissions page, which shows the details of the contact form submissions.
+This allows the superusers to view the contacts from their users and provides them with their email address so they can liase with them further.
+
+### User permissions
+![user permissions](readme-images/user-perms.png)
+The website allows front end CRUD operations for the superuser.
+They can add, edit and delete products.
+A user that leaves a review is also allowed to add, edit and delete product reviews for products they have purchased.
+The restrictions added via the code ensures that there is a secure check placed on each crud operation to ensure only the correct user is allowed to complete these actions.
 
 
 ## Future Features
 
-* Details
-* On
-* Future
-* Features
+* Wishlist: It would be nice to have a wishlist to allow users to have more interations with the site. The wishlist is also great for the owners of the site as it allows them to show which products their users love and can then use that information to gear their marketing towards that further.
+* Multiple payment options: This site currently uses stripe payments, it would be nice in future to add options to include applepay and google pay to allow for swifter checkouts.
+* Live Chat Support: As the website grows, it would be great to include a live chat support for users to speak directly with a member of staff for any questions or concerns they may have.
 
 ## Accessibility
 
