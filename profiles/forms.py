@@ -3,6 +3,9 @@ from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """
+    A form for the user updating the details in the profile
+    """
     class Meta:
         model = UserProfile
         # rendering all fields except for the user
