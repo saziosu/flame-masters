@@ -1,8 +1,8 @@
 # Flame Masters
 
-[AM I RESPONSIVE IMAGE]
+![amiresponsive](readme-images/amiresponsive.png)
 
-Link for the finished deployed site: LINK
+Link for the finished deployed site: https://flame-masters-f04a2ade371e.herokuapp.com/
 
 # Table of Contents
 
@@ -37,7 +37,10 @@ Link for the finished deployed site: LINK
 
 
 # Site Goals
-site goals here
+The goals of the site are to provide users with an attractive site providing a range of Hot Sauces and Spicy Snacks with varying levels of heat.
+The user can decide how hot they want to go and view all products within that range.
+If the user has a favourite brand, they can also view all products from that range.
+
 
 # Agile Methodology
 This project was developed using agile methodologies by utilising Epics and User stories.
@@ -50,13 +53,16 @@ The full kanban board can be viewed here: LINK
 ## Labels
 The labels are priorised as follows:
 
-must have|This feature/issue is required for the project to function
-should have|Important to implement but will not crash the project without but still key features
-could have|Would like to have
+|             |                                                                                      |
+|-------------|--------------------------------------------------------------------------------------|
+| must have   | This feature/issue is required for the project to function                           |
+| should have | Important to implement but will not crash the project without but still key features |
+| could have  | would like to have, but not essential to the project                                 |
+| bug         | Something isn't working                                                              |
 
 These result in the following stats:
 
-IMAGE
+![User story stats](readme-images/story-stats.png)
 
 ## Epics
 There are three Epics within this project:
