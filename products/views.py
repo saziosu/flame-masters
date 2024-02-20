@@ -236,6 +236,7 @@ def edit_product_review(request, review_id):
             form = ProductReviewForm(request.POST, instance=review)
             if form.is_valid():
                 form.save()
+                messages.success(request, 'Successfully added your review!')
                 return redirect('product_detail', product_id=review.product.id)
         else:
             # Else, render the form with the current review details
@@ -267,4 +268,5 @@ def delete_product_review(request, review_id):
         return render(request, 'products/delete_review.html', {'review': review})
     else:
         # If the user is not the owner of the review, redirect them back to the product detail page
+        messages.error(request, 'You can only delete your own review')
         return redirect('product_detail', product_id=review.product.id)
