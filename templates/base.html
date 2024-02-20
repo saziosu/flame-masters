@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Flame Masters online store for hot sauce and spicy snacks">
+    <meta name="description" content="Flame Masters online store for hot sauce and spicy snacks with worldwide delivery">
     <meta property="og:title" content="Flame Masters">
     <meta property="og:description" content="Flame Masters online store for hot sauce and spicy snacks">
     <meta property="og:url" content="https://flame-masters-f04a2ade371e.herokuapp.com">
-    <meta name="keywords" content="hot sauce, spicy snacks, spicy food, chili sauce, spicy noodles, spicy nuts, habanero, jalapeno, ghost pepper, spicy condiments">
+    <meta name="keywords" content="hot sauce, spicy snacks, spicy food, chili sauce, spicy noodles, spicy nuts, habanero, jalapeno, ghost pepper, spicy condiments, worldwide, delivery, affordable hot sauces">
     {% endblock %}
 
     {% block favicon %}
@@ -117,7 +117,7 @@
                     </li>
                     <!-- cart totals -->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %} text-black font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_cart' %}" aria-label="Link to shopping cart">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -181,7 +181,7 @@
         </div>
     
         <!-- Copyright -->
-        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.4);">
+        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.7);">
             <span id="footer-text">&copy; 2024 Flame Masters </span>
         </div>
     </footer>

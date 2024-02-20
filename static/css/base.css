@@ -112,6 +112,12 @@ body {
     cursor: pointer;
 }
 
+/* Styling product links */
+.link-text {
+    text-decoration: underline;
+    color: rgb(22, 22, 22);
+}
+
 /* ------------------------------- bootstrap toasts */
 .message-container {
     position: fixed;
