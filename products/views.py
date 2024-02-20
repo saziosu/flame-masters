@@ -169,14 +169,18 @@ def delete_product(request, product_id):
     """
     A view to handle deleting products
     """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-        
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            product.delete()
+            messages.success(request, 'Product deleted!')
+            return redirect(reverse('products'))
+
+        return render(request, 'products/delete_product.html', {'product': product})
+    else:
+        messages.error(request, 'Only store owners can do that')
+        return redirect(reverse('products'))
 
 
 @login_required
@@ -262,6 +266,7 @@ def delete_product_review(request, review_id):
         if request.method == 'POST':
             # If the user confirms deletion, delete the review
             review.delete()
+            messages.success(request, 'Successfully deleted your review')
             return redirect('product_detail', product_id=review.product.id)
         
         # Render the confirmation template
