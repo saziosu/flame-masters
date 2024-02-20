@@ -28,7 +28,7 @@
                 <form action="{% url 'delete_product_review' review.id %}" method="post">
                     {% csrf_token %}
                     <button type="submit">Confirm Deletion</button>
-                    <a href="{% url 'product_detail' review.product.id %}">Cancel</a>
+                    <a href="{% url 'product_detail' review.product.id %}" aria-label="Returns to the product detail page">Cancel</a>
                 </form>
             </div>            
         </div>
