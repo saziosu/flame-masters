@@ -118,9 +118,19 @@
                                 {% if review.comment %}
                                 <p class="card-text"><strong>Comment:</strong> {{ review.comment }}</p>
                                 {% endif %}
+                                {% if review.reviewer == request.user %}
+                                <p class="card-text"> <a href="{% url 'edit_review' review.id %}">Edit</a> </p>
+                                {% endif %}
                             </div>
                         </div>
                         {% endfor %}
+                    {% else %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">No Reviews yet for {{ product.name }}!</h5>
+                            <p class="card-text">Please purchase this product to leave a review</p>
+                        </div>
+                    </div>
                     {% endif %}
                 </div>
                 {% if user.is_authenticated %}
