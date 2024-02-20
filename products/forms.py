@@ -9,7 +9,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         # include all fields from the Product model
-        fields = '__all__'
+        exclude = ['average_rating']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
