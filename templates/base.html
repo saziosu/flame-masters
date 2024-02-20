@@ -70,7 +70,7 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="Links to the homepage">
                     <h2 class="logo-font text-black my-0"><strong>Flame</strong> Masters</h2>
                 </a>
             </div>
@@ -95,7 +95,7 @@
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                            aria-haspopup="true" aria-expanded="false" aria-label="Dropdown menu">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -104,21 +104,21 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            <a href="{% url 'contact-submissions' %}" class="dropdown-item">Contacts</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Link to product management page">Product Management</a>
+                            <a href="{% url 'contact-submissions' %}" class="dropdown-item" aria-label="Link to view contact form submissions">Contacts</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="View user profile">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Logout from account">Logout</a>
                             {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Register for account">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login to user account">Login</a>
                             {% endif %}
                         </div>
                     </li>
                     <!-- cart totals -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_cart' %}">
+                            href="{% url 'view_cart' %}" aria-label="Link to shopping cart">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
