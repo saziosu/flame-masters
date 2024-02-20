@@ -120,7 +120,15 @@ Cart & Payments|As a user I can make payments so that I can receive my products|
 ## Wireframes
 
 The following wireframes were used to plan the look of the site:
-IMAGE
+
+Home Page:
+![homepage wireframe](readme-images/homepage-wireframe.png)
+
+Products Page:
+![products wireframe](readme-images/products-wireframe.png)
+
+Cart Page:
+![cart wireframe](readme-images/cart-wireframe.png)
 
 # Design
 
