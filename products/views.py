@@ -219,3 +219,30 @@ def review_product(request, product_id):
         'product': product
         }
     return render(request, template, context)
+
+
+@login_required
+def edit_product_review(request, review_id):
+    """
+    A view to allow the user to edit their own reviews
+    """
+    review = get_object_or_404(ProductReview, id=review_id)
+    
+    
+    # Check if the current user is the owner of the review
+    if request.user == review.reviewer:
+        # If the request is post, save the form
+        if request.method == 'POST':
+            form = ProductReviewForm(request.POST, instance=review)
+            if form.is_valid():
+                form.save()
+                return redirect('product_detail', product_id=review.product.id)
+        else:
+            # Else, render the form with the current review details
+            form = ProductReviewForm(instance=review)
+        # Redirect to the edit_product_review template
+        return render(request, 'products/edit_product_review.html', {'form': form, 'review': review})
+    else:
+        # Error if the user does not own that review
+        messages.error(request, 'You can only edit your own review')
+        return redirect('product_detail', product_id=review.product.id)
