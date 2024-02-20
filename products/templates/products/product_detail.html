@@ -120,6 +120,7 @@
                                 {% endif %}
                                 {% if review.reviewer == request.user %}
                                 <p class="card-text"> <a href="{% url 'edit_review' review.id %}">Edit</a> </p>
+                                <p class="card-text"> <a href="{% url 'delete_product_review' review.id %}">Delete</a> </p>
                                 {% endif %}
                             </div>
                         </div>
