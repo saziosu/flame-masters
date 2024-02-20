@@ -65,20 +65,57 @@ These result in the following stats:
 ![User story stats](readme-images/story-stats.png)
 
 ## Epics
-There are three Epics within this project:
+There are six Epics within this project:
 
-**EPIC: ONEt**
-Details on epic one
+**EPIC: Design & Experience**
+This epic focuses on the overall styling of the website
 
-**EPIC: TWO**
-Details on Epic two
+**EPIC: User Interactivity & Feedback**
+This epic focuses on the communications between the website and the user
+
+**EPIC: Product Admin**
+This epic focuses on the product management on the front end for the admin user
+
+**EPIC: User Accounts**
+This epic focuses on the user's ability to register for an account
+
+**EPIC: Product Viewing**
+This epic focuses on the features of viewing products on the front end for the shopping user
+
+**EPIC: Cart & Payments**
+This epic focuses on the shopping cart and payments
 
 
 ## User Stories
 Majority of User stories are linked to Epics. Labels are applied for prioritisation, such as `must have`, `should have` and `could have`.
 
-**Epic**|**User Story**|**Label**
-TABLE OF USER STORIES
+**Epic**|**User story**|**Label**
+:-----:|:-----:|:-----:
+-|As a Developer, I can deploy the website early so that I can avoid any technical issues or stress later in the project|Must have
+ Design & Experience|As a User, I can view a clean and attractive website so that I can have a positive experience|could have
+ Design & Experience|As a User, I can receive feedback messages so that I can gain feedback from the actions I have completed|could have
+User Interactivity & Feedback|As a User, I can receive confirmation emails so that I can track my order|should have
+User Interactivity & Feedback|As a User, I can contact the website admins so that I can resolve any issues with my order|could have
+User Interactivity & Feedback|As a user, I can leave reviews on a product so that I can give my opinion on the product|could have
+User Interactivity & Feedback|As a user, I can sign up for a newsletter so that I can keep up to date on news from my favourite store|could have
+User Interactivity & Feedback|As a user, I can edit my product reviews so that I can update my feedback|should have
+User Interactivity & Feedback|As a User, I can delete my reviews so that I can change my feedback|could have
+Product Admin|Allow Admin users to create products|must have
+Product Admin|As an Admin, I can update products on the front end so that I can update details on the products|must have
+Product Admin|As an Admin, I can delete products on the front end so that I can manage my store|must have
+User Accounts|As a user, I can register for an account so that I can manage my details|should have
+User Accounts|As a user, I can view my order history on my profile so that I can track my purchasing|could have
+User Accounts|As a user, I can update my personal details so that I can have them saved for my next purchase|should have
+Product Viewing|As a user, I can view all available products so that I can compare and decide which I want to purchase|must have
+Product Viewing|As a user I can view the detailed descriptions of a product so that I can decide if it is suitable for my taste|must have
+Product Viewing|As a user I can see the price of the product so that I can know if its in my price range|must have
+Product Viewing|As a user I can choose different categories from the front end so that I can find the products that I want to purchase|should have
+Product Viewing|As a user, I can search for products so that I can find the product I am looking for|should have
+Cart & Payments|As a user I can add products to my cart so that I can purchase them|must have
+Cart & Payments|As a user I can remove items from my cart so that I can purchase something else|must have
+Cart & Payments|As a user I can update the number of items in my cart so that I can easily purchase the correct number of items|must have
+Cart & Payments|As a user I can see how much total order will cost so that I can know if I can afford my purchase|must have
+Cart & Payments|As a user I can make payments so that I can receive my products|must have
 
 ## Wireframes
 
