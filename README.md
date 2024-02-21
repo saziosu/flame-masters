@@ -224,7 +224,8 @@ The restrictions added via the code ensures that there is a secure check placed 
 
 ## Accessibility
 
-ACCESSIBILITY CONSIDERATIONS
+* Aria Labels were used on all buttons and links throughout the site to ensure accessibility needs are met
+* On the initial completion of the code, I used lighthouse to look into accessibility of the site. There were several issues noted with the links and colors on the site. The links for CRUD functions like updating product quantity, editing product reviews etc were showing issues with color contrast. I updated these to buttons to ensure there was enough contrast for the user.
 
 # Technology Used
 
@@ -239,12 +240,10 @@ ACCESSIBILITY CONSIDERATIONS
 
 * BootStrap
 * Django
-* AutoSlug
 * [ElephantSQL](https://www.elephantsql.com/) + PostgreSQL
 * AWS S3
 * CrispyForms
 * django-allauth
-* django-phonenumber-field & phonenumbers
 * gunicorn
 * psycopg2
 * requests-oauthlib
@@ -272,7 +271,7 @@ Heroku was used to deploy this site:
 6. Head to the Settings tab in the new app.
 7. Go to "Config Vars" under the Settings tab.
 8. Click on "Reveals Config Vars".
-9. Add the "ARN", "DATABASE_URL", and "SECRET_KEY" values generated for the project
+9. Add the "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "EMAIL_HOST_PASS", "EMAIL_HOST_USER", "STRIPE_PUBLIC_KEY", "STRIPE_SECRET_KEY", "STRIPE_WH_SECRET", "DATABASE_URL", and "SECRET_KEY" values generated for the project. Set "USE_AWS" to True
 10. Add "PORT" key and "8000" value to the config vars.
 11. Move to the "deploy" tab on the app, and scroll down to the deployment method section.
 12. Select "GitHub" and connect to GitHub.
@@ -288,25 +287,83 @@ Heroku was used to deploy this site:
 
 ## Code
 
-* CODE
-* CREDITS
-* HERE
+* [Code Institute](https://github.com/Code-Institute-Solutions/boutique_ado_v1) I relied heavily on the Boutique Ado walkthrough with several areas of the site such as profiles, cart, home, products, templates, etc
+* [Code With Stein](https://www.youtube.com/watch?v=8iCqlFyFu2s) this resource was helpful in planning the product reviews.
+* [Django documentation](https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/#django.forms.ModelForm) this resource was used to help with setting up the contact forms
+* [StackOverflow](https://stackoverflow.com/questions/67351312/django-check-if-superuser-in-class-based-view) this resource was helpful in securing the contact views to ensure that only superusers can view the contact form submissions.
+* [CrispyForms documentation](https://django-crispy-forms.readthedocs.io/en/latest/form_helper.html) used this resource to help use the crispyforms layout helper on my contact modelform
+* [ChatGPT](https://chat.openai.com/) I used ChatGPT with help securing my add_product_review view to only users that have ordered the product before and only allowing the user to order it one time to help prevent the ratings being skewed by multiple reviews from a single user.
+* [OpenClassrooms](https://openclassrooms.com/en/courses/6967196-create-a-web-application-with-django/7349788-delete-objects-safely-with-user-confirmation) this resource was helpful in setting up the view to delete product reviews. I also used it to refactor the delete_product view to provide a confirmation template that the user needs to confirm they want to delete the selected item.
+* [Django Documentation](https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/#django.views.generic.edit.CreateView) this documentation was helpful with setting up the contact form views.
+* [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/auth/default/) this was helpful in settings up the contact form submissions view to allow only the superuser to view the contact form submissions from the users.
+
+
 
 
 ## Media
+Product images were gained from these sources:
 
-* MEDIA
-* CREDITS
-* HERE
+* [ChiliChump](https://chillichump.com/wp-content/uploads/2023/09/Hot-sauce-ingredients.png)
+* [Hot Ones](https://heatonist.com/products/hot-ones-hot-sauce-los-calientes-rojo)
+* [Tobasco](https://www.ebay.co.uk/itm/123993107394?var=426101877330)
+* [Tia Lupita](https://tialupitafoods.com/collections/all-products/products/habanero-hot-sauce)
+* [Zing](https://www.texasfood.com/Mikey-Vs-Zing-Mild-Sauce.html)
+* [Beyond Insanity](https://world.openfoodfacts.org/product/0732458901140/bottle-da-bomb-beyond-insanity-hot-sauce)
+* [Dillicous](https://chillicult.co.uk/angry-irishman-dill-licious-dill-pickle-hot-sauce)
+* [Ghost Pepper Jolokia](https://davesgourmet.com/products/ghost-pepper-jolokia-sauce/)
+* [Blue Diamond](https://bluediamondstore.com/products/bold-spicy-dill-almonds-6oz-cans-case-of-12)
+* [Teriyaki Takis](https://www.candyland.ie/products/takis-ninja-teriyaki)
+* [Blackberry Chipotle](https://www.hotsauceemporium.co.uk/product/hot-headz-blackberry-chipotle/)
+* [KP Chili peanuts](https://www.tesco.com/groceries/en-GB/products/297814101)
+* [Wasabi Peas](https://www.asiamarket.ie/khao-shong-wasabi-coated-green-peas-280g.html)
+* [Kolohekid](https://adoboloco.com/shop/kolohekid-ghost-pepper-hawaiian-hotsauce/)
+* [Hot Habenero Sauce](https://www.hotsauceemporium.co.uk/product/marie-sharps-hot-habanero/)
+* [Da Bomb](https://world.openfoodfacts.org/product/0732458901140/bottle-da-bomb-beyond-insanity-hot-sauce)
+* [Bajan Pepper](https://www.hotsauceemporium.co.uk/product/daddy-cools-bajan-pepper-sauce/)
+* [Samyang Carbo](https://www.asiamarket.ie/samyang-carbo-hot-chicken-flavor-ramen-130g.html)
+* [Cheetos](https://www.walmart.com/ip/Cheetos-Crunchy-XXTRA-Flamin-Hot-Cheese-Flavored-Snack-Chips-8-5-oz-Bag/49909688)
+* [Taki Fuego](https://sweetboutique.ie/products/takis-fuego-92-3g)
+* [Ghost Pepper peanuts](https://spicesontheweb.co.uk/insane-ghost-pepper-peanuts-80g/)
+* [Samyang 3x](https://www.asiamarket.ie/samyang-3xspicy-bulkdak-noodle-140g.html)
+* [Jalapeno Apple](https://www.hotsauceemporium.co.uk/product/bravado-spice-co-jalapeno-green-apple/)
+* [Funken Hot](https://www.hotsauceemporium.co.uk/product/karma-sauce-funken-hot/)
+* [Ultimate Insanity](https://www.hotsauceemporium.co.uk/product/daves-gourmet-ultimate-insanity/)
+* [Reapers Gummy Bear](https://chillibom.com.au/collections/5-plus-chillibom-heat-rating/products/rummy-bear-reapers-gummy-bears?variant=39348998570038)
 
 
 ## Content
-
-* CONTENT
-* CREDITS
+I used the following resources to get product descriptions and ingredients
+* 
+* [Ultimate Insanity](https://davesgourmet.com/products/ultimate-insanity-sauce)
+* [Ghost Pepper Jolokia](https://davesgourmet.com/products/ghost-pepper-jolokia-sauce)
+* [Funken Hot](https://www.hotsauceemporium.co.uk/product/karma-sauce-funken-hot/)
+* [BlackBerry Chipotle](https://hot-headz.com/sauces/hot-chilli-sauces/hot-headz-blackberry-chipotle-hot-sauce/)
+* [Beyond Insanity](https://www.hotsauceemporium.co.uk/product/da-bomb-beyond-insanity/)
+* [Hot Habenero Sauce](https://www.hotsauceemporium.co.uk/product/marie-sharps-hot-habanero/)
+* [Bajan Pepper](https://www.hotsauceemporium.co.uk/product/daddy-cools-bajan-pepper-sauce/)
+* [Kolohekid](https://adoboloco.com/shop/kolohekid-ghost-pepper-hawaiian-hotsauce/)
+* [Tia Lupita](https://tialupitafoods.com/collections/all-products/products/habanero-hot-sauce)
+* [Hot Ones](https://heatonist.com/products/hot-ones-hot-sauce-los-calientes-rojo)
+* [Tobasco](https://shop.tabasco.com/products/original-red-sauce)
+* [Zing](https://www.texasfood.com/Mikey-Vs-Zing-Mild-Sauce.html)
+* [Jalapeno Apple](https://simply-texas-gourmet-foods.myshopify.com/products/bravado-jalapeno-apple-hot-sauce#product-info)
+* [Dillicous](https://chillicult.co.uk/angry-irishman-dill-licious-dill-pickle-hot-sauce)
+* [Blue Diamond](https://www.amazon.com/Blue-Diamond-Almonds-Spicy-Pickle/dp/B07XHRRRQ6?th=1)
+* [Blue Diamond](https://bluediamondstore.com/products/bold-spicy-dill-almonds-6oz-cans-case-of-12)
+* [Teriyaki Taki](https://mesadelsur.com/en/products/takis-ninja-teriyaki-90g)
+* [KP Chili peanuts](https://www.tesco.com/groceries/en-GB/products/297814101)
+* [Wasabi Peas](https://www.asiamarket.ie/khao-shong-wasabi-coated-green-peas-280g.html)
+* [Samyang Carbo](https://www.asiamarket.ie/samyang-carbo-hot-chicken-flavor-ramen-130g.html)
+* [Cheetos](https://www.cheetos.com/products/cheetos-crunchy-xxtra-flamin-hot-cheese-flavored-snacks)
+* [Taki Fuego](https://takis.ca/products/spicy-tortilla-chips/takis-fuego/280-g)
+* [Ghost Pepper peanuts](https://spicesontheweb.co.uk/insane-ghost-pepper-peanuts-80g/)
+* [Samyang 3x](https://www.asiamarket.ie/samyang-3xspicy-bulkdak-noodle-140g.html)
+* [Reapers Gummy Bear](https://chillibom.com.au/collections/5-plus-chillibom-heat-rating/products/rummy-bear-reapers-gummy-bears?variant=39348998570038)
 
 # Acknowledgements
 
-* Thanks y'all
+* Graeme, my mentor, for all the help and advice throughout the project.
+* Course Facilitator Alan for all the helpful tips and tricks, and great guidance throughout the project.
+* My cohort classmates for feedback during our standups.
 
 [Top](#flamemasters)
