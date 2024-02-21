@@ -27,8 +27,8 @@
 
                 <form action="{% url 'delete_product' product.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" aria-label="Confirm deleting this product">Confirm Deletion</button>
-                    <button onclick="window.history.back();" class="btn text-danger" type="button" aria-label="Cancel and return to previous page">Cancel</button>
+                    <button onclick="window.history.back();" class="btn btn-outline-black rounded-0" type="button" aria-label="Cancel and return to previous page">Cancel</button>
+                    <button class="btn btn-black rounded-0" type="submit" aria-label="Confirm deleting this product">Confirm Deletion</button>
                 </form>
             </div>
         </div>
