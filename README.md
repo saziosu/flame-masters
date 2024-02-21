@@ -64,6 +64,39 @@ The businesses marketing strategy going forward is:
 * Use paid advertisement such as Google Ads to bring the promoted link on google searches. Potentially use sponsored Facebook ads to promote a wider reach of users.
 * The business may also benefit from partnering with influencers, the size of which depends on the size of the business to coincide with demand.
 
+# SEO
+
+[Wordtracker](https://www.wordtracker.com/search?query=hot%20sauce) was used to help generate keywords on the site.
+Description and meta tags were used to help the SEO. Although Google does not use meta keywords for searches anymore these were added for the short tail keywords for consistency.
+
+## Keywords
+
+* Short tail keywords: hot sauce, spicy snacks, spicy food, chili sauce, spicy noodles, spicy nuts, habanero, jalapeno, ghost pepper, spicy condiments, worldwide, delivery, affordable hot sauces, hot ones hot sauce, da bomb hot sauce
+* Long tail keywords: Flame Masters online store for hot sauce and spicy snacks with worldwide delivery
+
+## Sitemap.xml
+A sitemap was generated via https://www.mysitemapgenerator.com/ so that search engines like Google can search it effectively
+
+### Robots.txt
+I generated a robots.txt file so that google can crawl the site effectively.
+The accounts and cart pages were blocked off from User Agent crawling to prevent these pages from being indexed as these wouldn't be necessary to find on a search engine result
+
+### Facebook Business Page
+
+[Facebook](https://www.facebook.com/profile.php?id=61556519101346) was used to generate the Facebook page.
+The cover photo uses the same image as the homepage on the site for consistency.
+The profile picture was generated using the ChatGPT image generator.
+
+In case this is deactivated, these screenshots are also available:
+![Facebook1](readme-images/facebook-1.png)
+![Facebook2](readme-images/facebook-2.png)
+
+### Favicon
+
+The favicon for the site was generated using this website:
+https://favicon.io/
+I used the simple text to ico option, and added it as FM for the initials of the website.
+
 # Agile Methodology
 This project was developed using agile methodologies by utilising Epics and User stories.
 User storied were assigned to Epics. 
@@ -271,6 +304,7 @@ The restrictions added via the code ensures that there is a secure check placed 
 * requests-oauthlib
 * sqlparse
 * urllib3
+* FontAwesome
 
 # Deployment & Development
 
@@ -319,12 +353,10 @@ Heroku was used to deploy this site:
 * [Django Documentation](https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/#django.views.generic.edit.CreateView) this documentation was helpful with setting up the contact form views.
 * [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/auth/default/) this was helpful in settings up the contact form submissions view to allow only the superuser to view the contact form submissions from the users.
 
-
-
-
 ## Media
 Product images were gained from these sources:
 
+* [Favicon](https://favicon.io/) I used this website to generate my favicon
 * [ChiliChump](https://chillichump.com/wp-content/uploads/2023/09/Hot-sauce-ingredients.png)
 * [Hot Ones](https://heatonist.com/products/hot-ones-hot-sauce-los-calientes-rojo)
 * [Tobasco](https://www.ebay.co.uk/itm/123993107394?var=426101877330)
