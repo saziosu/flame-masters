@@ -165,7 +165,7 @@ This allows users to register for an account, login and sign out.
 This allows users to see different content based on their account role like user, or admin/superuser
 
 ### Products
-![products](readme-images/products.png)
+![products](readme-images/all-products.png)
 The products page is based on the Boutique Ado walkthrough.
 It is also responsive via the bootstrap classes and features counts of the products features.
 It also allows sorting by brand name, heat level, price, etc.
@@ -178,7 +178,7 @@ It also includes the average rating and ingredients.
 If the website owner marks the product as a staff favourite it also notes this for the user on this page.
 
 ### Product Reviews
-![product reviews](readme-images/product-reviews.png)
+![product reviews](readme-images/product-review.png)
 The product reviews can be found at the bottom of the product detail page.
 This allows users to add review if they have ordered a product.
 They can also only leave one review for a product, this helps prevent the data on the rating from getting skewed by multiple reviews from one person.

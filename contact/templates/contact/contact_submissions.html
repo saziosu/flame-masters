@@ -30,7 +30,7 @@
                         <p class="card-text"><strong>Date:</strong> {{ contact.created_on }}</p>
                         <p class="card-text"><strong>Contact Reason: </strong>{{ contact.get_reason_display }}</p>
                         {% if contact.order_number %}
-                        <p class="card-text"><strong>Date:</strong> {{ contact.order_number }}</p>
+                        <p class="card-text"><strong>Order Number:</strong> {{ contact.order_number }}</p>
                         {% endif %}
                         <p class="card-text"><strong>Message:</strong> {{ contact.message }}</p>
                     </div>
