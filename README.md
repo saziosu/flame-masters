@@ -10,6 +10,7 @@ Link for the finished deployed site: https://flame-masters-f04a2ade371e.herokuap
 - [Table of Contents](#table-of-contents)
 - [Site Goals](#site-goals)
 - [Business Model](#business-model)
+- [Database](#database)
 - [Agile Methodology](#agile-methodology)
 - [Design](#design)
 - [Features](#features)
