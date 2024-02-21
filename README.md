@@ -97,6 +97,10 @@ The favicon for the site was generated using this website:
 https://favicon.io/
 I used the simple text to ico option, and added it as FM for the initials of the website.
 
+# Database
+Database scheme diagram:
+![database image](readme-images/database.png)
+
 # Agile Methodology
 This project was developed using agile methodologies by utilising Epics and User stories.
 User storied were assigned to Epics. 
