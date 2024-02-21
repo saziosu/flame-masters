@@ -6,33 +6,17 @@ Link for the finished deployed site: https://flame-masters-f04a2ade371e.herokuap
 
 # Table of Contents
 
-- [Flame Masters](#flamemasters)
+- [Flame Masters](#flame-masters)
 - [Table of Contents](#table-of-contents)
 - [Site Goals](#site-goals)
+- [Business Model](#business-model)
 - [Agile Methodology](#agile-methodology)
-  - [Labels](#labels)
-  - [Epics](#epics)
-  - [User Stories](#user-stories)
-  - [Wireframes](#wireframes)
 - [Design](#design)
-  - [Color Scheme](#color-scheme)
-  - [Typography](#typography)
-  - [Imagery](#imagery)
 - [Features](#features)
-  - [Current Features](#current-features)
-  - [Future Features](#future-features)
-  - [Accessibility](#accessibility)
 - [Technology Used](#technology-used)
-  - [Languages](#languages)
-  - [Frameworks, Libraries \& Programs](#frameworks-libraries--programs)
 - [Deployment \& Development](#deployment--development)
-  - [Forking the Repository](#forking-the-repository)
-  - [Deploy to Heroku](#deploy-to-heroku)
 - [Testing](#testing)
 - [Credits](#credits)
-  - [Code](#code)
-  - [Media](#media)
-  - [Content](#content)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -41,6 +25,44 @@ The goals of the site are to provide users with an attractive site providing a r
 The user can decide how hot they want to go and view all products within that range.
 If the user has a favourite brand, they can also view all products from that range.
 
+# Business Model
+
+## Business Overview:
+Our business operates as a B2C e-commerce platform, dedicated to providing a diverse range of fiery hot sauces and spicy snacks through an online store. It specializes in offering affordable yet flavorful products, catering to spice enthusiasts with pricing ranging from $1.95 to $17.95.
+The business offers free shipping when the user makes a purchase over $30.
+
+## Advantages for the Business Owner:
+
+* Scalability: Business will be easy to expand as the business grows, accomodating demand.
+* Global Accessibility: The website offers worldwide delivery, allowing a wide reach of users.
+* Cost Efficiency: No requirement for physical storefronts, which reduces overhead costs.
+* Impulse Purchases: Affordable pricing encourages spontaneous purchases, enhancing sales potential. Free delivery marker encourages users to 'buy one more' to reach free delivery
+* Niche Targeting: Focuses on a specific market segment. Identifies a specific target audience in spicy food lovers.
+
+
+### Challenges:
+
+* Brand Establishment: Building brand recognition takes time and requires a robust marketing approach to stand out in the market.
+* Trust Building: Establishing trust and loyalty without a physical presence may require offering discounts or special promotions.
+* Marketing Investment: Generating organic traffic may be time-consuming, necessitating active marketing efforts or investment in paid advertising.
+* Order Volume Requirement: Processing a substantial number of orders is essential to maintain profitability due to lower price points.
+
+## Site User
+There are many potential users that would shop on this website
+
+* Spice Enthusiasts: Individuals who enjoy bold and intense flavors, seeking out new and exciting spicy food experiences.
+* Foodies: People passionate about exploring different cuisines and flavors, who are always on the lookout for unique and flavorful products to enhance their culinary adventures.
+* Adventurous Eaters: Individuals who are passitonate about pushing the limits of their taste and what levels of spice they can handle.
+* Gift Shoppers: Customers looking for distinctive and memorable gifts for friends or family members who share a love for spicy food and want to purchase a more unusual gift for them
+* Health-conscious Consumers: Those who appreciate the health benefits associated with spicy foods, such as metabolism boosting properties or potential pain relief, and seek out quality products that align with their dietary preferences.
+
+## Marketing Strategy
+The businesses marketing strategy going forward is:
+
+* Use the Facebook business page, seen in then SEO section of this README to promote the business.
+* Send out offers via the MailChimp newsletter and offer special subscriber access to new products before they are fully launched
+* Use paid advertisement such as Google Ads to bring the promoted link on google searches. Potentially use sponsored Facebook ads to promote a wider reach of users.
+* The business may also benefit from partnering with influencers, the size of which depends on the size of the business to coincide with demand.
 
 # Agile Methodology
 This project was developed using agile methodologies by utilising Epics and User stories.
@@ -366,4 +388,4 @@ I used the following resources to get product descriptions and ingredients
 * Course Facilitator Alan for all the helpful tips and tricks, and great guidance throughout the project.
 * My cohort classmates for feedback during our standups.
 
-[Top](#flamemasters)
+[Top](#flame-masters)
