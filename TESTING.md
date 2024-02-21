@@ -1,8 +1,8 @@
 # Flame Masters | Testing
 
-Link for the finished deployed site: LINK
+Link for the finished deployed site: [FlameMasters](https://flame-masters-f04a2ade371e.herokuapp.com/)
 
-AMIRESPONSIVE IMAGE
+![Amiresponsive image](readme-images/amiresponsive.png)
 
 # Table of Contents
 
@@ -26,24 +26,46 @@ AMIRESPONSIVE IMAGE
 [W3C](https://validator.w3.org/) was used to validate the HTML code across all pages of the website.
 Due to the django templating, pasting directly from the code was not possible.
 Instead the source code via the browser was used to test these and directly input into the validator.
+Several changes were made to resolve any errors found
 
-TABLE OF TESTING
 
 ## CSS Validator
 
 [Jigsaw](https://jigsaw.w3.org/css-validator/) was used to validate the CSS code across all possible pages of the website.
 
-TABLE OF TESTING
+| Page     | Pass/Fail |
+| -------- | --------- |
+| Homepage | Pass      |
+| Products | Pass      |
+| Contact  | Pass      |
+| Login    | Pass      |
+| Cart     | Pass      |
 
 All other pages required login which was not handled by the validator via the url
 Most of the pages are utilising Bootstrap for styling, however the custom css from style.css was input manually and passed with no errors:
 
-IMAGE OF TESTING
+**base.css**
+![base css](readme-images/base-css.png)
+
+**checkout.css**
+![checkout css](readme-images/checkout-css.png)
+
+**profile.css**
+![profile css](readme-images/profile-css.png)
 
 ### JavaScript Validator
 
 [JShint](https://jshint.com/) was used to validate the JavaScript on the site.
-DETAILS ON TESTING
+
+Javascript from the following templates/files were tested:
+* cart.html
+* stripe_elements.js
+* products.html
+* quantity_input_script.html
+* countryfield.js
+
+All passed through the validators.
+Most showed errors for undefined variables or unused variables, but these are coming from the HTML that is not seen by the validator
 
 ### Python Validator
 
