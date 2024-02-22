@@ -29,23 +29,23 @@ If the user has a favourite brand, they can also view all products from that ran
 # Business Model
 
 ## Business Overview:
-Our business operates as a B2C e-commerce platform, dedicated to providing a diverse range of fiery hot sauces and spicy snacks through an online store. It specializes in offering affordable yet flavorful products, catering to spice enthusiasts with pricing ranging from $1.95 to $17.95.
+The business operates as a B2C e-commerce platform, dedicated to providing a diverse range of fiery hot sauces and spicy snacks through an online store. It specializes in offering affordable yet flavorful products, catering to spice enthusiasts with pricing ranging from $1.95 to $17.95.
 The business offers free shipping when the user makes a purchase over $30.
 
 ## Advantages for the Business Owner:
 
-* Scalability: Business will be easy to expand as the business grows, accomodating demand.
+* Scalability: The business will be relatively easy to expand as the business grows, accomodating demand.
 * Global Accessibility: The website offers worldwide delivery, allowing a wide reach of users.
-* Cost Efficiency: No requirement for physical storefronts, which reduces overhead costs.
+* Cost Efficiency: Since there is no requirement for physical storefronts this reduces overall overhead
 * Impulse Purchases: Affordable pricing encourages spontaneous purchases, enhancing sales potential. Free delivery marker encourages users to 'buy one more' to reach free delivery
-* Niche Targeting: Focuses on a specific market segment. Identifies a specific target audience in spicy food lovers.
+* Niche Targeting: The website focuses on a specific market segment with a specific target audience in spicy food lovers.
 
 
 ### Challenges:
 
 * Brand Establishment: Building brand recognition takes time and requires a robust marketing approach to stand out in the market.
 * Trust Building: Establishing trust and loyalty without a physical presence may require offering discounts or special promotions.
-* Marketing Investment: Generating organic traffic may be time-consuming, necessitating active marketing efforts or investment in paid advertising.
+* Marketing Investment: Generating organic traffic may be time-consuming, requiring active marketing efforts or investment in paid advertising.
 * Order Volume Requirement: Processing a substantial number of orders is essential to maintain profitability due to lower price points.
 
 ## Site User
@@ -53,9 +53,9 @@ There are many potential users that would shop on this website
 
 * Spice Enthusiasts: Individuals who enjoy bold and intense flavors, seeking out new and exciting spicy food experiences.
 * Foodies: People passionate about exploring different cuisines and flavors, who are always on the lookout for unique and flavorful products to enhance their culinary adventures.
-* Adventurous Eaters: Individuals who are passitonate about pushing the limits of their taste and what levels of spice they can handle.
+* Adventurous Eaters: Individuals who are passionate about pushing the limits of their taste and what levels of spice they can handle.
 * Gift Shoppers: Customers looking for distinctive and memorable gifts for friends or family members who share a love for spicy food and want to purchase a more unusual gift for them
-* Health-conscious Consumers: Those who appreciate the health benefits associated with spicy foods, such as metabolism boosting properties or potential pain relief, and seek out quality products that align with their dietary preferences.
+* Health-conscious Consumers: Those who appreciate the health benefits associated with spicy foods, such as metabolism boosting properties or potential pain relief, and seek out quality products that align with their dietary preferences. Since most hot sauces are naturally vegan, it is also an attractive business for users that are conscious of eating animal products.
 
 ## Marketing Strategy
 The businesses marketing strategy going forward is:
