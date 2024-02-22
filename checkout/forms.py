@@ -30,7 +30,8 @@ class OrderForm(forms.ModelForm):
             'street_address2': 'Street Address 2',
             'county': 'County, State or Locality',
         }
-        # Autofocus sets the cursor on this field when opening the order form/checkout page
+        # Autofocus sets the cursor on this field 
+        # when opening the order form/checkout page
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':

@@ -37,8 +37,8 @@ class ProductReviewForm(forms.ModelForm):
     RATING_CHOICES = [(i, str(i)) for i in range(1, 6)]
 
     rating = forms.ChoiceField(
-        label = "Rating",
-        choices = RATING_CHOICES,
+        label="Rating",
+        choices=RATING_CHOICES,
     )
 
     class Meta:
@@ -47,7 +47,7 @@ class ProductReviewForm(forms.ModelForm):
             'rating',
             'comment',
         ]
-    
+
     def __init__(self, *args, **kwargs):
         """
         https://django-crispy-forms.readthedocs.io/en/latest/layouts.html
@@ -57,5 +57,7 @@ class ProductReviewForm(forms.ModelForm):
         self.helper.layout = Layout(
             Field('rating'),
             Field('comment'),
-            Submit('submit', 'Add my Review!', css_class='btn btn-black rounded-0 text-uppercase mt-5'),
+            Submit('submit',
+                   'Add my Review!',
+                   css_class='btn btn-black rounded-0 text-uppercase mt-5'),
         )

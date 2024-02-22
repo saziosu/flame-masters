@@ -26,11 +26,15 @@ class ContactForm(ModelForm):
         self.helper.form_action = 'contactform'
         self.helper.layout = Layout(
             Field('reason'),
-            Field('order_number', placeholder='If you have an order number, please enter here'),
+            Field('order_number',
+                  placeholder='If applicable, add your order number'),
             Field('name'),
             Field('email'),
             Field('message', placeholder="How can we help?"),
-            Reset('reset', 'Reset Form', css_class='btn btn-outline-black rounded-0 text-uppercase mt-5'),
-            Submit('submit', 'Submit!', css_class='btn btn-black rounded-0 text-uppercase mt-5'),
+            Reset('reset',
+                  'Reset Form',
+                  css_class='btn btn-outline-black rounded-0 text-uppercase'),
+            Submit('submit',
+                   'Submit!',
+                   css_class='btn btn-black rounded-0 text-uppercase'),
         )
-        

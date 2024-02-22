@@ -33,7 +33,6 @@ def all_products(request):
                 sortkey = 'brand__name'
             if sortkey == 'heat_level':
                 sortkey = 'heat_level__heat_order'
-            
 
             if 'direction' in request.GET:
                 # set the direction of the sorting
@@ -41,7 +40,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-                
+
         if 'category' in request.GET:
             # Allow filter by category
             categories = request.GET['category'].split(',')
@@ -64,23 +63,24 @@ def all_products(request):
             query = request.GET['q']
             if not query:
                 # messages to report that there was nothing searched
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             # queries to allow searching for a product
             # i for case insensitivity
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(ingredients__icontains=query) | Q(heat_level__name__iexact=query) | Q(brand__name__icontains=query) # noqa
-            products = products.filter(queries) 
+            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(ingredients__icontains=query) | Q(heat_level__name__iexact=query) | Q(brand__name__icontains=query)  # noqa
+            products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
         'search_term': query,
-        'current_categories' : categories,
-        'current_brands' : brand,
-        'current_heat' : heat_level,
-        'current_sorting' : current_sorting,
+        'current_categories': categories,
+        'current_brands': brand,
+        'current_heat': heat_level,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)
@@ -92,7 +92,8 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.product_reviews.all()
-    avg_rating = ProductReview.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg']
+    filter_reviews = ProductReview.objects.filter(product=product)
+    avg_rating = filter_products.aggregate(Avg('rating'))['rating__avg']
 
     context = {
         'product': product,
@@ -106,7 +107,7 @@ def product_detail(request, product_id):
 @login_required
 def add_product(request):
     """
-    A view to allow adding products 
+    A view to allow adding products
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -121,7 +122,9 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
     template = 'products/add_product.html'
@@ -150,7 +153,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'Currently editing {product.name}')
@@ -177,7 +182,9 @@ def delete_product(request, product_id):
             messages.success(request, 'Product deleted!')
             return redirect(reverse('products'))
 
-        return render(request, 'products/delete_product.html', {'product': product})
+        return render(
+            request,
+            'products/delete_product.html', {'product': product})
     else:
         messages.error(request, 'Only store owners can do that')
         return redirect(reverse('products'))
@@ -191,14 +198,17 @@ def review_product(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     # Only allow the user to rate a product once
-    if ProductReview.objects.filter(product=product, reviewer=request.user).exists():
+    if ProductReview.objects.filter(product=product,
+                                    reviewer=request.user).exists():
         messages.error(request, 'Sorry, you can only rate a product once')
         return redirect('product_detail', product_id=product_id)
     else:
         # Determine if the user is authenticated
-        if request.user.is_authenticated and not isinstance(request.user, AnonymousUser):
+        if request.user.is_authenticated and not isinstance(request.user,
+                                                            AnonymousUser):
             # Check that the user has ordered the product before
-            if Order.objects.filter(email=request.user.email, lineitems__product=product).exists():
+            if Order.objects.filter(email=request.user.email,
+               lineitems__product=product).exists():
                 if request.method == 'POST':
                     form = ProductReviewForm(request.POST)
                     if form.is_valid():
@@ -206,15 +216,20 @@ def review_product(request, product_id):
                         review.product = product
                         review.reviewer = request.user
                         review.save()
-                        messages.success(request, 'Successfully Added your review!')
-                        return redirect('product_detail', product_id=product_id)
+                        messages.success(
+                            request, 'Successfully Added your review!')
+                        return redirect('product_detail',
+                                        product_id=product_id)
                 else:
                     form = ProductReviewForm()
             else:
-                messages.error(request, 'You must have ordered this product to write a review')
+                messages.error(request,
+                               'You must have ordered this \
+                               product to write a review')
                 return redirect('product_detail', product_id=product_id)
         else:
-            messages.error(request, 'Sorry, you must be logged in to review products')
+            messages.error(request,
+                           'Sorry, you must be logged in to review products')
             return redirect('account_login')
 
     template = 'products/review_product.html'
@@ -231,8 +246,7 @@ def edit_product_review(request, review_id):
     A view to allow the user to edit their own reviews
     """
     review = get_object_or_404(ProductReview, id=review_id)
-    
-    
+
     # Check if the current user is the owner of the review
     if request.user == review.reviewer:
         # If the request is post, save the form
@@ -246,7 +260,8 @@ def edit_product_review(request, review_id):
             # Else, render the form with the current review details
             form = ProductReviewForm(instance=review)
         # Redirect to the edit_product_review template
-        return render(request, 'products/edit_product_review.html', {'form': form, 'review': review})
+        context = {'form': form, 'review': review}
+        return render(request, 'products/edit_product_review.html', context)
     else:
         # Error if the user does not own that review
         messages.error(request, 'You can only edit your own review')
@@ -260,7 +275,7 @@ def delete_product_review(request, review_id):
     The user must be logged in and own the review to delete it
     """
     review = get_object_or_404(ProductReview, id=review_id)
-    
+
     # Check if the current user is the owner of the review
     if request.user == review.reviewer:
         if request.method == 'POST':
@@ -268,10 +283,12 @@ def delete_product_review(request, review_id):
             review.delete()
             messages.success(request, 'Successfully deleted your review')
             return redirect('product_detail', product_id=review.product.id)
-        
+
         # Render the confirmation template
-        return render(request, 'products/delete_review.html', {'review': review})
+        context = {'review': review}
+        return render(request, 'products/delete_review.html', context)
     else:
-        # If the user is not the owner of the review, redirect them back to the product detail page
+        # If the user is not the owner of the review,
+        # redirect them back to the product detail page
         messages.error(request, 'You can only delete your own review')
         return redirect('product_detail', product_id=review.product.id)

@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 if os.path.isfile("env.py"):
-   import env
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-saziosu-flamemasters-hfdo5d4vuy3.ws-eu108.gitpod.io', 'flame-masters-f04a2ade371e.herokuapp.com']
+ALLOWED_HOSTS = ['8000-saziosu-flamemasters-hfdo5d4vuy3.ws-eu108.gitpod.io',
+                 'flame-masters-f04a2ade371e.herokuapp.com']
 
 
 # Application definition
@@ -85,7 +86,8 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by django-allauth
+                # required by django-allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -100,7 +102,8 @@ TEMPLATES = [
     },
 ]
 
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage' # required by gitpod
+# required by gitpod
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -118,10 +121,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True  # email is required
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # makes email verification required
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True  # makes the user confirm the email address
+# makes the user confirm the email address
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4  # sets the min username length
 LOGIN_URL = '/accounts/login/'  # this is where the user will log in
-LOGIN_REDIRECT_URL = '/'  # this is where the user will be redirected after login (homepage)
+# this is where the user will be redirected after login (homepage)
+LOGIN_REDIRECT_URL = '/'
 
 
 WSGI_APPLICATION = 'flame_masters.wsgi.application'
@@ -140,8 +145,6 @@ WSGI_APPLICATION = 'flame_masters.wsgi.application'
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -187,7 +190,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 if 'USE_AWS' in os.environ:
-    
+
     # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',

@@ -41,7 +41,8 @@ class HeatLevel(models.Model):
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
-    # setting this to apply a numerated heat order, so it is not by ID/alphabetical
+    # setting this to apply a numerated heat order,
+    # so it is not by ID/alphabetical
     heat_order = models.PositiveIntegerField(null=True, blank=True)
 
     def __str__(self):
@@ -55,9 +56,15 @@ class Product(models.Model):
     """
     Model for information on the individual products
     """
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    brand = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
-    heat_level = models.ForeignKey('HeatLevel', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category',
+                                 null=True, blank=True,
+                                 on_delete=models.SET_NULL)
+    brand = models.ForeignKey('Brand',
+                              null=True, blank=True,
+                              on_delete=models.SET_NULL)
+    heat_level = models.ForeignKey('HeatLevel',
+                                   null=True, blank=True,
+                                   on_delete=models.SET_NULL)
     name = models.CharField(max_length=254, blank=False, null=False)
     description = models.TextField(null=False, blank=False)
     average_rating = models.FloatField(default=0)
@@ -76,10 +83,12 @@ class ProductReview(models.Model):
     A model to handle allowing reviews on products
     https://www.youtube.com/watch?v=8iCqlFyFu2s
     """
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product_reviews')
+    product = models.ForeignKey(Product,
+                                on_delete=models.CASCADE,
+                                related_name='product_reviews')
     rating = models.IntegerField()
     comment = models.TextField()
-    reviewer = models.ForeignKey(User, related_name='product_reviews', on_delete=models.CASCADE)
+    reviewer = models.ForeignKey(User,
+                                 related_name='product_reviews',
+                                 on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
-
-    

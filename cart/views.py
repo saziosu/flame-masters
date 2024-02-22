@@ -5,7 +5,6 @@ from django.contrib import messages
 from products.models import Product
 
 
-
 def view_cart(request):
     """
     view to render the cart contents on the front end
@@ -25,11 +24,15 @@ def add_to_cart(request, item_id):
     if item_id in list(cart.keys()):
         # if this item is already in the cart, add to it
         cart[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to your {cart[item_id]}')
+        messages.success(
+            request,
+            f'Updated {product.name} quantity to your {cart[item_id]}')
     else:
         # else, add the quantity
         cart[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your shopping cart')
+        messages.success(
+            request,
+            f'Added {product.name} to your shopping cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -45,7 +48,9 @@ def modify_cart(request, item_id):
 
     if quantity > 0:
         cart[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+        messages.success(
+            request,
+            f'Updated {product.name} quantity to {cart[item_id]}')
     else:
         cart.pop(item_id)
         messages.success(request, f'Removed {product.name} from your bag')

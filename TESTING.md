@@ -70,8 +70,46 @@ Most showed errors for undefined variables or unused variables, but these are co
 ### Python Validator
 
 The [Code Institute Python Linter](https://pep8ci.herokuapp.com/) was used to validate the python code written on the project
+Several edits were made to resolve any errors, which were mainly lines too long and a missing new line at the end of the file.
+One file needed the `# noqa` applied as the long line could not be resolved.
+Whenever this was updated, to resolve style issues it lead to python syntax errors and it was decided to leave this as is for the moment.
+Some files, such as migration files and manage.py were showing lines too long but these were not updated as they are native django files
 
-DETAILS ON TESTING
+| File                            | Pass/Fail |
+| ------------------------------- | --------- |
+| cart/templatetags/cart_tools.py | Pass      |
+| cart/apps.py                    | Pass      |
+| cart/contexts.py                | Pass      |
+| cart/urls.py                    | Pass      |
+| cart/views.py                   | Pass      |
+| checkout/admin.py               | Pass      |
+| checkout/apps.py                | Pass      |
+| checkout/forms.py               | Pass      |
+| checkout/models.py              | Pass      |
+| checkout/signals.py             | Pass      |
+| checkout/urls.py                | Pass      |
+| contact/admin.py                | Pass      |
+| contact/forms.py                | Pass      |
+| contact/models.py               | Pass      |
+| contact/urls.py                 | Pass      |
+| contact/views.py                | Pass      |
+| flame_masters/urls.py           | Pass      |
+| flame_masters/settings.py       | Pass      |
+| flame_masters/views.py          | Pass      |
+| home/apps.py                    | Pass      |
+| home/urls.py                    | Pass      |
+| home/views.py                   | Pass      |
+| products/admin.py               | Pass      |
+| products/apps.py                | Pass      |
+| products/forms.py               | Pass      |
+| products/models.py              | Pass      |
+| products/urls.py                | Pass      |
+| products/views.py               | Pass      |
+| profiles/apps.py                | Pass      |
+| profiles/forms.py               | Pass      |
+| profiles/models.py              | Pass      |
+| profiles/urls.py                | Pass      |
+| profiles/views.py               | Pass      |
 
 ### Lighthouse Report
 
@@ -94,7 +132,6 @@ A range of devices were used to test the site.
 * Samsung s23 (Chrome, Firefox)
 * iPad 10th (Chrome, Safari)
 
-DETAILS ON EDITS MADE FROM TESTING HERE
 
 TABLE OF TESTED FEATURES
 
@@ -102,8 +139,8 @@ TABLE OF TESTED FEATURES
 
 ## Known Bugs
 
-KNOWN BUGS HERE
+To my knowledge there are no further bugs on this project
 
 ## Fixed bugs
 
-All resolved bugs are listed on the [kanban board for the project] (LINK HERE)
+All resolved bugs are listed on the [kanban board for the project](https://github.com/users/saziosu/projects/5)

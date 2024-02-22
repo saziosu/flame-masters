@@ -34,4 +34,3 @@ urlpatterns = [
 handler404 = 'flame_masters.views.handler404'
 handler403 = 'flame_masters.views.handler403'
 handler500 = 'flame_masters.views.handler500'
-

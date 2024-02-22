@@ -13,7 +13,7 @@ from .forms import ContactForm
 class ContactFormSubmitView(CreateView):
     """
     CreateView to submit a new contact form submission.
-    This allows users to submit general queries, complaints or 
+    This allows users to submit general queries, complaints or
     return queries
     """
     model = Contact
@@ -40,7 +40,7 @@ class ContactView(LoginRequiredMixin, UserPassesTestMixin, ListView):
     ListView to allow the admin user to view
     the contact form submissions on the front end
     """
-    
+
     model = Contact
     queryset = Contact.objects.order_by('-created_on')
     template_name = 'contact/contact_submissions.html'
@@ -54,4 +54,3 @@ class ContactView(LoginRequiredMixin, UserPassesTestMixin, ListView):
         if self.request.user.is_superuser:
             return True
         return False
-

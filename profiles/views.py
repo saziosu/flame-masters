@@ -18,7 +18,9 @@ def profile(request):
             # toast message that the profile is successfully updated
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Failed to update profile. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update profile. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
     # render the orders
