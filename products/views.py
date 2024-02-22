@@ -223,9 +223,9 @@ def review_product(request, product_id):
                 else:
                     form = ProductReviewForm()
             else:
-                messages.error(request,
-                               'You must have ordered this \
-                               product to write a review')
+                messages.error(
+                    request,
+                    'You must have ordered this product to write a review')
                 return redirect('product_detail', product_id=product_id)
         else:
             messages.error(request,
