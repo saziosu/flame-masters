@@ -113,9 +113,22 @@ Some files, such as migration files and manage.py were showing lines too long bu
 
 ### Lighthouse Report
 
-DETAILS ON LIGHTHOUSE TESTING
+Several edits were made after testing with lighthouse to ensure the site was as performantant and accessible as possible
 
-TABLE ON TESTING
+| Page                | Image          |
+| ------------------- | -------------- |
+| Home                | ![homepage](readme-images/lighthouse-homepage.png)     |
+| Products            | ![products](readme-images/lighthouse-products.png)   |
+| Product Detail      | ![product detail](readme-images/lighthouse-product-detail.png)   |
+| Cart                | ![cart](readme-images/lighthouse-cart.png)     |
+| Checkout            | ![checkout](readme-images/lighthouse-checkout.png) |
+| Register            | ![register](readme-images/lighthouse-register.png)          |
+| Login               | ![login](readme-images/lighthouse-login.png)    |
+| Logout              | ![logout](readme-images/lighthouse-logout.png)   |
+| Profile             | ![profile](readme-images/lighthouse-profile.png)  |
+| Contact             | ![contact](readme-images/lighthouse-contact.png)  |
+| Contact Submissions | ![contact submissions](readme-images/lighthouse-contact-submission.png)          |
+| Product Management  | ![product management](readme-images/lighthouse-productmanagement.png)          |
 
 # Manual Testing
 
