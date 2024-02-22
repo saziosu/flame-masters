@@ -93,7 +93,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.product_reviews.all()
     filter_reviews = ProductReview.objects.filter(product=product)
-    avg_rating = filter_products.aggregate(Avg('rating'))['rating__avg']
+    avg_rating = filter_reviews.aggregate(Avg('rating'))['rating__avg']
 
     context = {
         'product': product,
