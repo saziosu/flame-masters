@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-saziosu-flamemasters-hfdo5d4vuy3.ws-eu108.gitpod.io',
                  'flame-masters-f04a2ade371e.herokuapp.com']
