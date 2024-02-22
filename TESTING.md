@@ -6,7 +6,7 @@ Link for the finished deployed site: [FlameMasters](https://flame-masters-f04a2a
 
 # Table of Contents
 
-- [Flame Masters | Testing](#flamemasters--testing)
+- [Flame Masters | Testing](#flame-masters--testing)
 - [Table of Contents](#table-of-contents)
 - [Testing Tools](#testing-tools)
   - [W3C Validator](#w3c-validator)
